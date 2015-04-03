@@ -29,6 +29,15 @@
             <%= link_to 'Yes', task_path(task, completed: true), method: :patch %>
           </td>
           <td>
+            <%= link_to add_priority_path(task) do %>
+              <i class="fa fa-arrow-up"></i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to subtract_priority_path(task) do %>
+              <i class="fa fa-arrow-down"></i>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

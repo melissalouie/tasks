@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'tasks#index'
   resources :tasks
+  get '/tasks/:id/add_priority' => 'tasks#add_priority', as: 'add_priority'
+  get '/tasks/:id/subtract_priority' => 'tasks#subtract_priority', as: 'subtract_priority'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
