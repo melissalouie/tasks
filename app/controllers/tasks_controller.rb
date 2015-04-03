@@ -7,6 +7,7 @@ class TasksController < ApplicationController
  def create
    @task = Task.new(task_params)
    @task.priority = Task.count
+   @task.completed = false
    if @task.save
      redirect_to root_path, notice: "Task successfully created."
    else
